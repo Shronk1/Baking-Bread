@@ -46,6 +46,7 @@ section{
 .footerShower>svg{
     border-top-left-radius:50%;
     border-top-right-radius:50%;
+    transition: rotate 1s;
 }
 
 .footerShower{
@@ -59,6 +60,12 @@ section{
 
 .showElement, .showElementOnStart{
     display:none
+}
+
+.icon{
+    padding: 4px;
+    border: 2px solid white;
+    border-radius: 50%;
 }
 
 .sig{

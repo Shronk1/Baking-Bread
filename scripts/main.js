@@ -50,8 +50,6 @@ function sigReset(id) {
     temp.classList.remove("sig")
 }
 
-
-
 // load footer
 
 let isFooter = false;
@@ -65,14 +63,12 @@ function loadFooter() {
             const footer = $("#footer");            
             if (isFooter) {
                 footer.css({top:"calc(100vh - 32px)"})
-
                 sigReset("sigJ");
                 sigReset("sigO");
 
                 isFooter = false;
             }else{
                 footer.css({top:`calc(100vh - ${$("footer").height() + 32}px`})
-
                 makeSig("sigJ");
                 makeSig("sigO");
 
