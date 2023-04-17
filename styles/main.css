@@ -24,14 +24,33 @@ body{
 }
 main{
     z-index: 0;  
-     
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 section{
     width: 100%;
 
 }
-footer{
+#footer{
+    --position: 32px;
+    position: fixed;
+    top: calc(100vh -  var(--position));
+    transition: top 1s;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
 
+.footerShower>svg{
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+}
+
+.footerShower{
+    display: flex;
+    justify-content: center;
 }
 
 .parallax-window{
@@ -42,4 +61,12 @@ footer{
     display:none
 }
 
-
+.sig{
+    animation: sig 4s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes sig {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
